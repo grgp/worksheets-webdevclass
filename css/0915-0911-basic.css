@@ -1,0 +1,140 @@
+/*
+		CSS dasar untuk membuat template blog paling generic
+*/
+
+body {
+	margin: 0;
+	padding: 0;
+	background-color: #F8F8F8;
+	font-family: 'Corbel', 'Arial', sans-serif;
+	color: #303030;
+}
+
+.container {
+	position: relative;
+	width: 100%;
+	max-width: 1000px;
+	margin: auto;
+	z-index: -4;
+}
+
+.banner {
+	background-color: #FFD045;
+	color: #F9F9F9;
+	margin: auto;
+	margin-bottom: 30px;
+	text-align: center;
+	padding-top: 2px;
+	padding-bottom: 22px;
+}
+
+.navhead {
+	background-color: #FFD045;
+	color: #F9F9F9;
+	margin-bottom: 0px;
+	position:fixed;
+	left: 0;
+	right: 0;
+	z-index: -1;
+	padding: 0;
+}
+
+.navheadcont {
+	width: 100%;
+	max-width: 1000px;
+	margin: auto;
+	padding-left: 25px;
+}
+
+.row:before,
+.row:after {
+	content: "";
+	display: table;
+	clear: both;
+}
+
+.col-8-to-12 {
+	float: left;
+	width: 66%;
+}
+
+.col-4-to-12 {
+	float: left;
+	width: 34%;
+}
+
+h1, h3 {
+	font-family: 'Verdana', sans-serif;
+}
+
+h1 {
+	font-size: 64px;
+}
+
+h2 {
+	font-size: 34px;	
+}
+
+.content > article, .navsidebar {
+	background-color: #FBFBFB;
+	margin-bottom: 20px;
+	padding-top: 5px;
+	padding-bottom: 35px;
+	padding-left: 25px;
+	padding-right: 25px;
+	border-left: solid 2px #EDEDED;
+	border-right: solid 2px #EDEDED;
+	border-bottom: solid 6px #47c6ed;
+
+	font-size: 15px;
+}
+
+.navsidebar {
+	margin: 20px;
+	margin-left: 40px;
+	margin-top: 0px;
+	padding-left: 0px;
+	padding-right: 12px;
+}
+
+a {
+	color: #959595;
+	text-decoration: none;
+}
+
+a:hover {
+	color: #050505;
+}
+
+ul {
+	list-style-type: none;
+}
+
+ul > li {
+	font-family: 'Open Sans', sans-serif;
+	font-size: 15px;
+	margin-top: 5px;
+}
+
+footer {
+	background-color: #FBFBFB;
+	margin-bottom: 20px;
+	padding-top: 25px;
+	padding-bottom: 35px;
+	padding-left: 25px;
+	padding-right: 25px;
+	border-bottom: solid 4px #E0E0E0;
+	border-left: solid 2px #EDEDED;
+	border-right: solid 2px #EDEDED;
+	color: #959595;
+}
+
+.commentbox #commentform > input {
+	margin-bottom: 8px;
+}
+
+th, td {
+	padding: 5px;
+	width: 120px;
+	text-align: left;
+}

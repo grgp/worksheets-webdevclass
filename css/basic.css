@@ -19,8 +19,15 @@ body {
 }
 
 .banner {
-	background-color: #FFD045;
-	color: #F9F9F9;
+	/* background-color: #FFD045; */
+	height: 550px;
+	background-image: url("../images/_20resized.jpg");
+	-webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-attachment: fixed;
+	color: #FAFAFA;
 	margin: auto;
 	margin-bottom: 30px;
 	text-align: center;
@@ -60,8 +67,8 @@ body {
 }
 
 .col-4-to-12 {
-	float: right;
-	width: 34%;
+	float: left;
+	width: 33.3%;
 }
 
 h1, h3 {
@@ -73,19 +80,20 @@ h1 {
 }
 
 h2 {
-	font-size: 34px;	
+	font-size: 40px;	
+	line-height: 12px;
 }
 
 .content > article, .navsidebar {
 	background-color: #FBFBFB;
 	margin-left: 30px;
 	margin-bottom: 20px;
-	padding-top: 5px;
+	padding-top: 15px;
 	padding-bottom: 35px;
 	padding-left: 25px;
 	padding-right: 25px;
-	border-left: solid 2px #EDEDED;
-	border-right: solid 2px #EDEDED;
+	border-left: solid 2px #ededed;
+	border-right: solid 2px #ededed;
 	border-bottom: solid 6px #47c6ed;
 	font-size: 15px;
 }

@@ -6,23 +6,66 @@
 		<meta name="description" content="Currently an empty blog.">
 		<title>George A. Pitoy | Blog</title>
 		<link rel="stylesheet" type="text/css" href="css/basic.css"/>
+		<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300' rel='stylesheet' type='text/css'>
 	</head>
 	<body>
 
-	<div class="container">
-		<div class="row">
-			<div class="banner">
-					<h1>the blog blog</h1>
-					<p>George's currently extremely bland blog.</p>
+	<div class="row">
+		<div class="navhead">
+			<div class="navheadcont">
+				<h3>the blog blog</h3>
+				<ul>
+					<li><a href="index.html">home</a></li>
+					<li><a href="archive.html">archive</a></li>
+					<li><a href="about.html">about</a></li>
+					<li><a href="contact.html">contact</a></li>
+				</ul>
 			</div>
 		</div>
+	</div>
 
-		<div class="navhead">
-			
+	<div class="banner">
+		<div class="row">
+				<h1>the blog blog</h1>
+				<h3>George's still extremely bland but now responsive blog.</h3>
 		</div>
+		<div class="row">
+			<div class="featuredrow">
+				<div class="col-4-to-12">
+					<div class="featuredbox grow">
+						<img src="images/thumb1.jpg" alt="thumb1"/>
+						<div class="featuredboxcont">
+							<h3>Add and Drop</h3>
+							<p>Lorem ipsum igitur placeholder text sucks, learn more here.</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-4-to-12">
+					<div class="featuredbox grow">
+						<img src="images/hipsterbackground.jpg" alt="thumb1"/>
+							<div class="featuredboxcont">
+								<h3>Fifth post</h3>
+								<p>Lorem ipsum igitur placeholder text sucks. Try hovering over!</p>
+							</div>
+					</div>
+				</div>
+				<div class="col-4-to-12">
+					<div class="featuredbox grow" id="lastbox">
+						<img src="images/temp.jpg" alt="thumb1"/>
+						<div class="featuredboxcont">
+							<h3>Fourth post</h3>
+							<p>Lorem ipsum igitur placeholder text sucks, learn more here.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
 
+	<div class="container">
 		<div class="row">
 			<div class="pinned">
+				<!-- pending -->
 			</div>
 			<br>
 		</div>
@@ -72,27 +115,28 @@
 					<!-- <div class="post"> -->
 					<article>
 						<header>
-							<h2>Sixth post</h2>
+							<h2>Responsive Youtube Embed</h2>
 							<p><i>4 September 2015</i></p>
 						</header>
 
 						<p>When designing anything with content (websites, brochures, etc.), if you don’t have the real content, using Lorem Ipsum is the most common way to fill those spaces. However, for anyone who designs regularly and needs such filler text, it is pretty boring to use Lorem Ipsum again and again.<br><br>If you want to try an alternative to Lorem Ipsum, there are several web-based generators which are easy-to-use, customizable and, usually, fun.</p>
 						
-						<iframe width="426" height="240" src="http://www.youtube.com/embed/-9KhWCdKJIc?autoplay=1">
-						</iframe>
+						<div class="videocont">
+							<iframe width="640" height="360" src="http://www.youtube.com/embed/E1oZhEIrer4">
+							</iframe>
+						</div>
 					</article>
 					<!-- </div> -->
 
 					<!-- <div class="post"> -->
 					<article>
 						<header>
-							<h2>Fifth post</h2>
+							<h2>Fourth post</h2>
 							<p><i>1 September 2015</i></p>
 						</header>
 
 						<p>When designing anything with content (websites, brochures, etc.), if you don’t have the real content, using Lorem Ipsum is the most common way to fill those spaces. However, for anyone who designs regularly and needs such filler text, it is pretty boring to use Lorem Ipsum again and again.<br><br>If you want to try an alternative to Lorem Ipsum, there are several web-based generators which are easy-to-use, customizable and, usually, fun.</p><br>
 
-						<img width="600" src="images/bann.jpg" alt="landing image"/>
 					</article>
 					<!-- </div> -->
 				</div>
@@ -109,8 +153,8 @@
 							<li>
 								<a href="#">September 2015</a>
 								<ul>
-									<li><a href="#">Add and Drop</a></li>
-									<li><a href="#">Fifth post</a></li>
+									<li><a href="www.google.com">Add and Drop</a></li>
+									<li><a href="#">Responsive Youtube Embed</a></li>
 								</ul>
 							</li>
 							<li>
@@ -140,7 +184,7 @@
 					<form id="commentform">
 						<input type="text" name="name" required placeholder="Name is required"><br>
 						<input type="email" name="emailaddr" placeholder="E-mail is optional"><br>
-						<input type="text" name="comment" placeholder="Your comment here."><br>
+						<input type="text" name="comment" required pattern=".{20,}" placeholder="Jangan pendek2 yaa :)"><br>
 						<input type="submit" value="Submit">
 					</form>
 					<!--
@@ -148,7 +192,7 @@
 					-->
 				</div>
 
-			<p>Copyright 2015</p>
+			<p>Copyright 2015. Image credit from Unsplash.</p>
 			<a href="https://github.com/grgp">Find me on my inactive Github.</a>
 		</footer>
 

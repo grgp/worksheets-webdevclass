@@ -3,7 +3,7 @@
 body {
 	margin: 0;
 	padding: 0;
-	background-color: #F8F8F8;
+	background-color: #00F8F8;
 	font-family: 'Corbel', 'Arial', sans-serif;
 	color: #303030;
 }
@@ -181,51 +181,14 @@ div {
 	color: #303030;
 }
 
-<<<<<<< HEAD
-.content .postbox, .navsidebar {
-=======
 /* ------- [END] BANNER -------- */
 
 /* ------- CONTENT -------- */
 
 .content > article, .navsidebar {
->>>>>>> crazyexperiment
 	background-color: #FBFBFB;
 	margin-left: 30px;
 	margin-bottom: 20px;
-<<<<<<< HEAD
-	border-left: solid 2px #EDEDED;
-	border-right: solid 2px #EDEDED;
-	border-bottom: solid 6px #47c6ed;
-}
-
-.content .postbox > article, .navsidebar {
-	padding-top: 5px;
-	padding-bottom: 35px;
-	padding-left: 25px;
-	padding-right: 25px;
-	font-size: 15px;
-}
-
-.content .postbox > img {
-	margin-bottom: -10px;
-	-moz-box-shadow: inset 0 0 3px #555;
-	-webkit-box-shadow: inset 0 0 3px #555;
-	box-shadow: inset 0 0 3px #555;
-}
-
-.navsidebar {
-	margin: 20px;
-	margin-left: 40px;
-	margin-top: 0px;
-	padding-left: 0px;
-	padding-right: 12px;
-}
-
-a {
-	color: #959595;
-	text-decoration: none;
-=======
 	padding-top: 15px;
 	padding-bottom: 35px;
 	padding-left: 25px;
@@ -242,7 +205,6 @@ a {
 	padding-top: 30px;
 	height: 0;
 	overflow: hidden;
->>>>>>> crazyexperiment
 }
 
 .videocont iframe, .videocont object, .videocont embed {
@@ -307,31 +269,6 @@ footer {
 	}
 }
 
-<<<<<<< HEAD
-img {
-	max-width:100%;
-	max-height:100%;
-}
-
-/*------ backup -------*/
-
-
-/*
-.content .postbox > article, .navsidebar {
-	background-color: #FBFBFB;
-	margin-bottom: 20px;
-	padding-top: 5px;
-	padding-bottom: 35px;
-	padding-left: 25px;
-	padding-right: 25px;
-	border-left: solid 2px #EDEDED;
-	border-right: solid 2px #EDEDED;
-	border-bottom: solid 6px #47c6ed;
-
-	font-size: 15px;
-}
-*/
-=======
 @media only screen and (max-width: 600px) {
 	.navsidebar, .featuredrow {
 		display: none;
@@ -366,4 +303,3 @@ img {
 }
 
 /* ------- [END] RESPONSIVE -------- */
->>>>>>> crazyexperiment

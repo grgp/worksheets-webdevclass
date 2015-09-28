@@ -16,7 +16,7 @@ Tasklist:
 [i] Dropdown menu
 [X] Theme
 [X] Comments on single post
-[ ] Timed event (popup/alert, idle > 30s)
+[X] Timed event (popup/alert, idle > 30s)
 
 ========================
 

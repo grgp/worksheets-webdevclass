@@ -1,5 +1,9 @@
 /* for the About page */
 
+.container {
+	margin-top: 80px;
+}
+
 #aboutpic > img {
 	margin-top: 10px;
 }

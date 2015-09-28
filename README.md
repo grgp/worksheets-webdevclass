@@ -4,8 +4,8 @@ Tasklist:
 
 [ ] Homepage
 [ ] Single post with comments form
-[ ] Biodata diri
-[ ] Kontak
+[X] Biodata diri
+[i] Kontak
 [ ] Navigasi antara halaman
 [ ] Archive
 

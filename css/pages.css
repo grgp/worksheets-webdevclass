@@ -1,0 +1,20 @@
+/* for the About page */
+
+#aboutpic > img {
+	margin-top: 10px;
+}
+
+#aboutpic > p {
+	text-align: center;
+	color: #959595;
+	font-size: 18px;
+}
+
+.pagetitle {
+	margin-left: 40px;
+}
+
+.pagetitle > h2 {
+	font-size: 52px;
+	font-weight: bold;
+}

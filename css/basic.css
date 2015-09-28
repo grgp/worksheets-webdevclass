@@ -203,6 +203,10 @@ div {
 	background-color: #FAFAFA;
 }
 
+.featuredbox > img {
+	height: 210px;
+}
+
 .featuredboxcont {
 	padding-top: 0px;
 	padding-bottom: 25px;

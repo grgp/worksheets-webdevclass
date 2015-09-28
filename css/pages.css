@@ -18,3 +18,9 @@
 	font-size: 52px;
 	font-weight: bold;
 }
+
+/* archive */
+
+li, #bluelink {
+	color: #47c6ed;
+}

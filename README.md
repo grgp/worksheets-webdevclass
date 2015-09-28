@@ -2,29 +2,29 @@ Tasklist:
 
 [ ] 6 pages
 
-[ ] Homepage
-[ ] Single post with comments form
+[i] Homepage
+[X] Single post with comments form
 [X] Biodata diri
 [i] Kontak
-[ ] Navigasi antara halaman
-[ ] Archive
+[X] Navigasi antara halaman
+[X] Archive
 
 ------------------------
 
 [ ] JS
 
-[ ] Dropdown menu
-[ ] Theme
-[ ] Comments on single post
+[i] Dropdown menu
+[X] Theme
+[X] Comments on single post
 [ ] Timed event (popup/alert, idle > 30s)
 
 ========================
 
 [ ] Misc
 
-[ ] Portability and Responsiveness
+[X] Portability and Responsiveness
 [ ] Valid HTML + CSS
-[ ] Documentation
+[i] Documentation
 [ ] Structure
 [ ] Indentation 
 [ ] Redundancy 

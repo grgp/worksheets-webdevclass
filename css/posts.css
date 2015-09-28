@@ -1,0 +1,16 @@
+.container {
+	margin-top: 90px;
+}
+
+ul {
+	margin-left: 0px;
+}
+
+#comments > li {
+	font-weight: bold;
+	font-size: 14px;
+}
+
+#comments > li > p {
+	font-weight: normal;
+}

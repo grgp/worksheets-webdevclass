@@ -52,6 +52,12 @@ ul > li {
 	margin-top: 5px;
 }
 
+hr {
+   border: 1px solid #eaeaea;
+}
+
+/* ----------- GRID ------------ */
+
 .row:before,
 .row:after {
 	content: "";
@@ -285,6 +291,10 @@ footer {
 	border-left: solid 2px #EDEDED;
 	border-right: solid 2px #EDEDED;
 	color: #959595;
+}
+
+.commentbox {
+	margin-left: 15px;
 }
 
 .commentbox #commentform > input {

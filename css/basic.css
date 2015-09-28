@@ -27,6 +27,10 @@ h2 {
 	font-size: 40px;	
 }
 
+h2 > a {
+	color: #303030;
+}
+
 h4 {
 	font-size: 50px;
 }

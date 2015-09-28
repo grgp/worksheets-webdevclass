@@ -1,13 +1,17 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<!--ws2 HTML5 -->
 		<meta charset="utf-8">
 		<meta name="description" content="Currently an empty blog.">
-		<title>the blog blog | archive</title>
+		<title>The Blog Blog | Archive</title>
 		<link rel="stylesheet" type="text/css" href="../css/basic.css"/>
+		<link rel="stylesheet" type="text/css" href="../css/dropdown.css"/>
 		<link rel="stylesheet" type="text/css" href="../css/pages.css"/>
-		<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" type="text/css" href="dummy" id="dummycss"/>
+		<!-- <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300' rel='stylesheet' type='text/css'> -->
+		<script src="../js/navbar.js" type="text/javascript"></script>
+		<script language="javascript" type="text/javascript" src="../js/changeTheme.js"></script>
+		<script language="javascript" type="text/javascript" src="../js/idle.js"></script>
 	</head>
 	<body>
 
@@ -17,9 +21,15 @@
 				<h3>the blog blog</h3>
 				<ul class="navheadmenus">
 					<li><a href="../index.html">home</a></li>
-					<li><a href="archive.html">archive</a></li>
-					<li><a href="about.html">about</a></li>
-					<li><a href="contact.html">contact</a></li>
+					<li><a href="../pages/archive.html">archive</a></li>
+					<li><a href="../pages/about.html">about</a>
+					<li><a href="../pages/contact.html">contact</a>
+					<li><a href="#" onclick="dropdown()">themes</a>
+						<ul id="navheadinside">
+							<li><a href="#" onclick="changeTheme('../css/dummycss.css')">orange</a></li>
+							<li><a href="#" onclick="changeTheme('../css/alttheme.css')">blue</a></li>
+						</ul>
+					</li>
 				</ul>
 			</div>
 		</div>
@@ -45,21 +55,21 @@
 						<ul>
 							<li><b>September 2015</b>
 								<ul>
-									<li> <a href="../pages/posts/first.html">Add and Drop</a> </li>
-									<li> <a href="../pages/.html">Responsive Youtube Embed</a> </li>
+									<li> <a href="posts/07AddAndDrop.html">Add and Drop</a> </li>
+									<li> <a href="posts/08ResponsiveYoutube.html">Responsive Youtube Embed</a> </li>
 								</ul>
 							</li>
 							<li><b>August 2015</b>
 								<ul>
-									<li> <a href="../pages/posts/first.html">Fourth post</a> </li>
-									<li> <a href="../pages/.html">Third post</a> </li>
-									<li> <a href="../pages/.html">Second post</a> </li>
+									<li> <a href="#">Fourth post</a> </li>
+									<li> <a href="#">Third post</a> </li>
+									<li> <a href="#">Second post</a> </li>
 								</ul>
 							</li>
 							<li><b>July 2015</b>
 								<ul>
-									<li> <a href="../pages/posts/first.html">First post</a> </li>
-									<li> <a href="../pages/.html">Test post please ignore</a> </li>
+									<li> <a href="#">First post</a> </li>
+									<li> <a href="#">Test post please ignore</a> </li>
 								</ul>
 							</li>
 						</ul>

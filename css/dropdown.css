@@ -1,6 +1,6 @@
-#navheadinside, #navheadinme {
+#navheadinside {
 	margin-top: 18px;
-	margin-left: 232px;
+	margin-left: 245px;
 	float: right;
 	padding-bottom: 5px;
 	padding-left: 2px;
@@ -8,10 +8,6 @@
 	background-color: #FFC929;
 	position: fixed;
 	font-size: 8px;
-}
-
-#navheadinme {
-	margin-left: 180px;
 }
 
 #navheadinside > li {
@@ -54,6 +50,11 @@
 	.navheadmenus > li {
 		font-size: 13px;
 		padding-left: 5px;
+	}
+
+	#navheadinside {
+		margin-left: 210px;
+		font-size: 13px;
 	}
 }
 

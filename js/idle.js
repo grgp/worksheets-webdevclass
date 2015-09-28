@@ -20,6 +20,6 @@ window.setInterval(CheckIdleTime, 1000);
 function CheckIdleTime() {
     counter++;
     if (counter >= timeout) {
-        alert("This is probably annoying if you're actually still reading.");
+        alert("Hi there. You've been doing nothing for 60 seconds now.");
     }
 }

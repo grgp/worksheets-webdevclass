@@ -5,7 +5,7 @@ Tasklist:
 [i] Homepage
 [X] Single post with comments form
 [X] Biodata diri
-[i] Kontak
+[X] Kontak
 [X] Navigasi antara halaman
 [X] Archive
 

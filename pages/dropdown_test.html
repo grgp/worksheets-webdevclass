@@ -6,12 +6,11 @@
 		<meta name="description" content="Currently an empty blog.">
 		<title>George A. Pitoy | Blog</title>
 		<link rel="stylesheet" type="text/css" href="../css/basic.css"/>
-		<link rel="stylesheet" type="text/css" href="../css/nobanner.css"/>
 		<link rel="stylesheet" type="text/css" href="../css/dropdown.css"/>
+		<link rel="stylesheet" type="text/css" href="dummy" id="dummycss"/>
 		<script src="../js/navbar.js" type="text/javascript"></script>
-		<!--
-		<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300' rel='stylesheet' type='text/css'>
-		-->
+		<script language="javascript" type="text/javascript" src="../js/changeTheme.js"></script>
+		<script language="javascript" type="text/javascript" src="../js/idle.js"></script>
 	</head>
 	<body>
 
@@ -20,17 +19,14 @@
 			<div class="navheadcont">
 				<h3>the blog blog</h3>
 				<ul class="navheadmenus">
-					<li><a href="index.html">home</a></li>
-					<li>
-						<a href="archive.html">archive</a>
-					</li>
-					<li><a href="#" onclick="dropdown()">about</a>
-					<li><a href="#">contact</a>
-					<!-- <li><a href="contact.html">contact</a></li> -->
+					<li><a href="../index.html">home</a></li>
+					<li><a href="../pages/archive.html">archive</a></li>
+					<li><a href="../pages/about.html">about</a>
+					<li><a href="../pages/contact.html">contact</a>
 					<li><a href="#" onclick="dropdown()">themes</a>
 						<ul id="navheadinside">
-							<li><a href="#">orange</a></li>
-							<li><a href="#">blue</a></li>
+							<li><a href="#" onclick="changeTheme('../css/dummycss.css')">orange</a></li>
+							<li><a href="#" onclick="changeTheme('../css/alttheme.css')">blue</a></li>
 						</ul>
 					</li>
 				</ul>

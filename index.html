@@ -6,11 +6,9 @@
 		<meta name="description" content="Currently an empty blog.">
 		<title>The Blog Blog | Home</title>
 		<link rel="stylesheet" type="text/css" href="css/basic.css" id="theme_css"/>
-		<link rel="stylesheet" type="text/css" href="css/dummy.css" id="dummycss"/>
-		<meta name="viewport" content="width=device-width">
-		<!--
-		<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300' rel='stylesheet' type='text/css'>
-		-->
+		<link rel="stylesheet" type="text/css" href="css/dropdown.css"/>
+		<link rel="stylesheet" type="text/css" href="dummy" id="dummycss"/>
+		<script src="js/navbar.js" type="text/javascript"></script>
 		<script language="javascript" type="text/javascript" src="js/changeTheme.js"></script>
 		<script language="javascript" type="text/javascript" src="js/idle.js"></script>
 	</head>
@@ -21,10 +19,16 @@
 			<div class="navheadcont">
 				<h3>the blog blog</h3>
 				<ul class="navheadmenus">
-					<li><a href="index.html">home</a></li>
+					<li><a href="../index.html">home</a></li>
 					<li><a href="pages/archive.html">archive</a></li>
-					<li><a href="pages/about.html">about</a></li>
-					<li><a href="pages/contact.html">contact</a></li>
+					<li><a href="pages/about.html">about</a>
+					<li><a href="pages/contact.html">contact</a>
+					<li onclick="dropdown()">themes
+						<ul id="navheadinside">
+							<li><a href="#" onclick="changeTheme('css/dummycss.css')">orange</a></li>
+							<li><a href="#" onclick="changeTheme('css/alttheme.css')">blue</a></li>
+						</ul>
+					</li>
 				</ul>
 			</div>
 		</div>
@@ -39,7 +43,7 @@
 			<div class="featuredrow">
 				<div class="col-4-to-12">
 					<div class="featuredbox grow">
-						<img src="images/thumb1.jpg" alt="thumb1"/>
+						<img src="images/flying-carpet.jpg" alt="thumb1"/>
 						<div class="featuredboxcont">
 							<h3>Add and Drop</h3>
 							<p>Lorem ipsum igitur placeholder text sucks, learn more here.</p>
@@ -48,7 +52,7 @@
 				</div>
 				<div class="col-4-to-12">
 					<div class="featuredbox grow">
-						<img src="images/hipsterbackground.jpg" alt="thumb1"/>
+						<img src="images/flying-carpet.jpg" alt="thumb1"/>
 							<div class="featuredboxcont">
 								<h3>Fifth post</h3>
 								<p>Lorem ipsum igitur placeholder text sucks. Try hovering over!</p>
@@ -57,7 +61,7 @@
 				</div>
 				<div class="col-4-to-12">
 					<div class="featuredbox grow" id="lastbox">
-						<img src="images/temp.jpg" alt="thumb1"/>
+						<img src="images/flying-carpet.jpg" alt="thumb1"/>
 						<div class="featuredboxcont">
 							<h3>Fourth post</h3>
 							<p>Lorem ipsum igitur placeholder text sucks, learn more here.</p>
@@ -70,19 +74,11 @@
 
 	<div class="container">
 		<div class="row">
-		<button onclick="changeTheme('css/alttheme.css')">atta</button>
-			<div class="pinned">
-				<!-- pending -->
-			</div>
-			<br>
-		</div>
-
-		<div class="row">
 			<div class="col-8-to-12">
 				<div class="content">
 					<article>
 						<header>
-							<h2>Add and Drop</h2>
+							<h2><a href="pages/posts/07AddAndDrop.html">Add and Drop</a></h2>
 							<p><i>8 September 2015</i></p>
 						</header>
 
@@ -121,7 +117,7 @@
 					<!-- <div class="post"> -->
 					<article>
 						<header>
-							<h2>Responsive Youtube Embed</h2>
+							<h2><a href="pages/posts/08ResponsiveYoutube.html">Responsive Youtube Embed</a></h2>
 							<p><i>4 September 2015</i></p>
 						</header>
 
@@ -165,7 +161,7 @@
 								<a href="#">September 2015</a>
 								<ul>
 									<li><a href="pages/posts/07AddAndDrop.html">Add and Drop</a></li>
-									<li><a href="#">Responsive Youtube Embed</a></li>
+									<li><a href="pages/posts/08ResponsiveYoutube.html">Responsive Youtube Embed</a></li>
 								</ul>
 							</li>
 							<li>

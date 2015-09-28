@@ -3,12 +3,16 @@
 	color: #FAFAFA;
 }
 
-.banner {
+#navheadinside > li {
+	border-bottom: 1px solid #38ADE8;
+}
+
+#navheadinside > li > a {
 	color: #FAFAFA;
 }
 
-#navheadinside > li {
-	background-color: #ffd353;
+.banner {
+	color: #FAFAFA;
 }
 
 .featuredbox {

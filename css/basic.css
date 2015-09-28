@@ -154,27 +154,6 @@ div {
 	padding-left: 20px;
 }
 
-#navheadinside {
-	margin-top: 18px;
-	margin-left: 36px;
-	padding-bottom: 5px;
-	padding-left: 2px;
-	display: none;
-	background-color: #FFC929;
-}
-
-#navheadinside > li {
-	background-color: #ffd353;
-	margin: 5px;
-	padding: 5px;
-	padding-left: 9px;
-	padding-right: 9px;
-}
-
-#navheadinside > li > a {
-	color: #303030;
-}
-
 .navheadmenus > li > a, .navheadinside > li > a {
 	color: #303030;
 }

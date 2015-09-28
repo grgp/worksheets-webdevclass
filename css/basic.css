@@ -55,6 +55,12 @@ ul > li {
 	clear: both;
 }
 
+.col-12-to-12 {
+	float: left;
+	width: 100%;
+	clear: both;
+}
+
 .col-8-to-12 {
 	float: left;
 	width: 66%;
@@ -66,6 +72,11 @@ ul > li {
 	width: 33.3%;
 }
 
+.col-2-to-12 {
+	float: left;
+	width: 16.6%;
+}
+
 /* ------- TRANSITIONS -------- */
 
 div {
@@ -74,10 +85,14 @@ div {
 
 .grow:hover {
   transform: scale(1.05);
-  /*
   webkit-transform: scale(1.05);
   -ms-transform: scale(1.05);
-  */
+}
+
+.grow2:hover {
+  transform: scale(1.35);
+  webkit-transform: scale(1.35);
+  -ms-transform: scale(1.35);
 }
 
 /* ------- [END] TRANSITIONS -------- */
@@ -115,20 +130,41 @@ div {
 	float: left;
 }
 
-.navheadcont > ul {
+.navheadmenus {
 	float: right;
 	padding-top: 5px;
 	padding-right: 42px;
 }
 
-.navheadcont > ul > li {
+.navheadmenus > li {
 	display: inline;
 	font-family: 'Verdana', sans-serif;
 	font-weight: bold;
 	padding-left: 20px;
 }
 
-.navheadcont > ul > li > a {
+#navheadinside {
+	margin-top: 18px;
+	margin-left: 36px;
+	padding-bottom: 5px;
+	padding-left: 2px;
+	display: none;
+	background-color: #FFC929;
+}
+
+#navheadinside > li {
+	background-color: #ffd353;
+	margin: 5px;
+	padding: 5px;
+	padding-left: 9px;
+	padding-right: 9px;
+}
+
+#navheadinside > li > a {
+	color: #303030;
+}
+
+.navheadmenus > li > a, .navheadinside > li > a {
 	color: #303030;
 }
 
@@ -251,6 +287,7 @@ footer {
 
 /* ------- RESPONSIVE -------- */
 
+/*
 @media only screen and (max-width: 900px) {
 	.navsidebar, #lastbox {
 		display: none;
@@ -289,9 +326,7 @@ footer {
 	}
 
 }
-/*
-@media only screen and (max-width: 420px) {
-*/
+
 @media only screen and (max-width: 540px) {
 	.banner {
 		height: 400px;
@@ -301,5 +336,6 @@ footer {
 		display: none;
 	}
 }
+*/
 
 /* ------- [END] RESPONSIVE -------- */

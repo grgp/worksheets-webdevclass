@@ -1,0 +1,22 @@
+.navheadmenus {
+	float: right;
+	padding-top: 5px;
+	padding-right: 42px;
+}
+
+.navheadmenus > li {
+	display: inline;
+	font-family: 'Verdana', sans-serif;
+	font-weight: bold;
+	padding-left: 20px;
+}
+
+.navheadmenus > li > a, .navheadinside > li > a {
+	color: #303030;
+}
+
+#navheadinside {
+	position: fixed;
+	font-size: 8px;
+	/* left: -9999px; */
+}

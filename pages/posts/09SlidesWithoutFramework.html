@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<!--ws2 HTML5 -->
+		<meta charset="utf-8">
+		<meta name="description" content="Currently an empty blog.">
+		<title>The Blog Blog | Slides Without Framework</title>
+		<link rel="stylesheet" type="text/css" href="../../css/basic.css" id="theme_css"/>
+		<link rel="stylesheet" type="text/css" href="../../css/posts.css"/>
+		<link rel="stylesheet" type="text/css" href="../../css/dropdown.css"/>
+		<link rel="stylesheet" type="text/css" href="../../css/slider.css"/>
+		<link rel="stylesheet" type="text/css" href="dummy" id="dummycss"/>
+
+		<script type="text/javascript" src="../../js/jquery-2.1.4.js"></script>
+
+		<script src="../../js/navbar.js" type="text/javascript"></script>
+		<script language="javascript" type="text/javascript" src="../../js/changeTheme.js"></script>
+		<script language="javascript" type="text/javascript" src="../../js/idle.js"></script>
+		<script type="text/javascript" src="../../js/slider.js"></script>
+		<script src="../../js/postcomment.js" type="text/javascript"></script>
+		
+		<!--
+		<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300' rel='stylesheet' type='text/css'>
+		-->
+	</head>
+	<body>
+
+	<div class="row">
+		<div class="navhead">
+			<div class="navheadcont">
+				<h3>the blog blog</h3>
+				<ul class="navheadmenus">
+					<li><a href="../../index.html">home</a></li>
+					<li><a href="../../pages/archive.html">archive</a></li>
+					<li><a href="../../pages/about.html">about</a>
+					<li><a href="../../pages/contact.html">contact</a>
+					<li><a href="#" onclick="dropdown()">themes</a>
+						<ul id="navheadinside">
+							<li><a href="#" onclick="changeTheme('../../css/dummycss.css')">orange</a></li>
+							<li><a href="#" onclick="changeTheme('../../css/alttheme.css')">blue</a></li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+
+	<div class="container">
+		<div class="row">
+			<div class="col-8-to-12">
+				<div class="content">
+					<article>
+						<header>
+							<h2>Responsive Youtube Embed</h2>
+							<p><i>4 September 2015</i></p>
+						</header>
+
+						<p>When designing anything with content (websites, brochures, etc.), if you don’t have the real content, using Lorem Ipsum is the most common way to fill those spaces. However, for anyone who designs regularly and needs such filler text, it is pretty boring to use Lorem Ipsum again and again.<br><br>If you want to try an alternative to Lorem Ipsum, there are several web-based generators which are easy-to-use, customizable and, usually, fun.</p>
+						
+				<div id="carousel">
+	        <div id="slides">
+	          <ul>
+	            <li><img src="../../images/resized.jpg" ></li>
+	            <li><img src="../../images/resized2.jpg" ></li>
+	            <li><img src="../../images/resized3.jpg" ></li>
+	          </ul>
+	        </div>
+	        <div class="left arrow" onClick="clickLeft()"></div>
+	        <div class="right arrow" onClick="clickRight()"></div>
+	        <div class="circles">
+	          <ul>
+	          </ul>
+	        </div>
+	      </div>
+
+					</article>
+				</div>
+
+				<div class="genericbox">
+					<ul id="comments">
+						<li>
+							Stan<br>
+							<p>How amazing</p>
+							<hr><br>
+						</li>
+						<li>
+							Andy<br>
+							<p>So interesting<p>
+							<hr><br>
+						</li>
+					</ul>
+
+					<br> <hr> <br>
+					
+					<div class="commentbox">
+					Your comment:<br>
+					<form id="commentform">
+						<input type="text" name="name" id="formname" required placeholder="Name is required"><br>
+						<input type="email" name="emailaddr" id="formemail" placeholder="E-mail is optional"><br>
+						<!--
+						<input type="text" name="comment" id="formtext" required pattern=".{20,}" placeholder="Jangan pendek2 yaa :)"><br>
+						-->
+					</form>
+					
+					<textarea name="comment" form="commentform" id="formarea"></textarea><br>
+					<input type="button" value="Submit" onclick="post()">
+
+					
+				</div>
+				</div>
+
+			</div>
+
+			<div class="col-4-to-12">
+				<div class="navsidebar">
+					<div class="calendar">
+					</div>
+
+					<div class="recent">
+						<ul>
+							<li>
+								<a href="#">September 2015</a>
+								<ul>
+									<li><a href="07AddAndDrop.html">Add and Drop</a></li>
+									<li><a href="08ResponsiveYoutube.html">Responsive Youtube Embed</a></li>
+								</ul>
+							</li>
+							<li>
+								<a href="#">August 2015</a>
+								<ul>
+									<li><a href="#">Fourth post</a></li>
+									<li><a href="#">Third post</a></li>
+									<li><a href="#">Second post</a></li>
+								</ul>
+							</li>
+							<li>
+								<a href="#">July 2015</a>
+								<ul>
+									<li><a href="#">First post</a></li>
+									<li><a href="#">Test post please ignore</a></li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<footer>
+			
+			<p>Copyright 2015.</p>
+			<a href="https://github.com/grgp">Find me on my inactive Github.</a>
+		</footer>
+
+	</div>
+
+	</body>
+</html>

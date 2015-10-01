@@ -1,5 +1,5 @@
 const ANIMATION_TIME = 600;
-const CAROUSEL_WIDTH = 400;
+const CAROUSEL_WIDTH = 560;
 const NB_OF_PHOTOS = 4;
 const TIME_BETWEEN_PHOTOS = 3000;
 var activePhoto = 1;

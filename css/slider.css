@@ -1,8 +1,8 @@
 #slides > ul, #slides > ul > li, #slides > ul > li > img {
-  width:400px;
-  height:300px;
-  margin:0;
-  padding:0;
+  width: 560px;
+  height: 315px;
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
 }
 
@@ -12,8 +12,8 @@
 
 #carousel{
   position: relative;
-  margin:50px auto;
-  width:400px;
+  margin:25px auto;
+  width:560px;
   height: 350px;
   overflow: hidden;
 }

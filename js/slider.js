@@ -1,7 +1,7 @@
 const ANIMATION_TIME = 600;
+const CAROUSEL_WIDTH = 560;
 const NB_OF_PHOTOS = 4;
 const TIME_BETWEEN_PHOTOS = 3000;
-const CAROUSEL_WIDTH = 560;
 var activePhoto = 1;
 var timer;
 
@@ -84,14 +84,8 @@ var addCircles = function(){
   $('.circles').css('margin-left', (CAROUSEL_WIDTH-width)/2);
 }
 
+
 $(document).ready(function(){
   addCircles();
   resetTimer();
 })
-
-/*
-if (window.matchMedia('(max-width: 950px)').matches)
-{
-    CAROUSEL_WIDTH = 500;
-}
-*/

@@ -1,7 +1,10 @@
+/* basic JQuery slider by user AtActionPark from github as part as The Odin Project
+tutorial series. https://github.com/AtActionPark/odin_carousel_slider/ */
+
 const ANIMATION_TIME = 600;
-const CAROUSEL_WIDTH = 560;
 const NB_OF_PHOTOS = 4;
-const TIME_BETWEEN_PHOTOS = 3000;
+var TIME_BETWEEN_PHOTOS = 5000;
+var CAROUSEL_WIDTH = 560;
 var activePhoto = 1;
 var timer;
 
@@ -66,6 +69,7 @@ var showPreview = function(){
 }
 
 var time = function(){
+  /* if (!$('#slides').is(":hover")) */
   clickRight();
 }
 
@@ -84,8 +88,33 @@ var addCircles = function(){
   $('.circles').css('margin-left', (CAROUSEL_WIDTH-width)/2);
 }
 
-
 $(document).ready(function(){
   addCircles();
   resetTimer();
 })
+
+/* function() code for pausing the slider on hover by the user cfs on stackoverflow
+http://stackoverflow.com/questions/18320536/stop-on-mouse-over-on-a-simple-jquery-slider */
+
+$(function() {
+    $('#slides').hover(function() {
+      resetTimer();
+      TIME_BETWEEN_PHOTOS = 90000000;
+      resetTimer();
+    }, function() {
+        TIME_BETWEEN_PHOTOS = 5000;
+        clickRight();
+    });
+});
+
+/* modifications: */
+
+if (window.matchMedia('(max-width: 980px)').matches){
+  CAROUSEL_WIDTH = 512;
+} else if (window.matchMedia('(max-width: 660px)').matches){
+  CAROUSEL_WIDTH = 416;
+} else if (window.matchMedia('(max-width: 540px)').matches){
+  CAROUSEL_WIDTH = 320;
+} else if (window.matchMedia('(max-width: 440px)').matches){
+  CAROUSEL_WIDTH = 160;
+}

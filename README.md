@@ -1,3 +1,15 @@
+01 Oktober 2015
+WS4 PPW - JQuery
+George Albert - 1406569781 - Kelas A
+
+Fitur slides yang diminta di worksheet bisa diakses melalui sidebar atau navigasi website lainnya, yaitu di halaman "Responsive Carousel." File HTML di /pages/posts/09SlidesWithoutFramework.html.
+
+---------------------------
+---------------------------
+---------------------------
+Previous notes:
+
+28 September 2015
 Tugas 1 PPW. 
 George Albert - 1406569781 - Kelas A
 

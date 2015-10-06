@@ -1,3 +1,6 @@
+/* basic JQuery slider by user AtActionPark from github as part as The Odin Project
+tutorial series. https://github.com/AtActionPark/odin_carousel_slider/ */
+
 #slides ul, #slides li, #slides img {
   width: 560px;
   height: 315px;
@@ -6,13 +9,10 @@
   box-sizing: border-box;
 }
 
-#carousel > * {
-
-}
-
 #carousel{
   position: relative;
   margin:25px auto;
+  margin-bottom: 0;
   width:560px;
   height: 350px;
   overflow: hidden;
@@ -67,7 +67,6 @@
   width:180px;
   margin-top:20px;
   margin-left:auto;
-  
 }
 
 .circles ul{
@@ -93,4 +92,44 @@
 
 .active{
   background-color: black;
+}
+
+/* responsive slider */
+
+@media only screen and (max-width: 980px) {
+    /* #slides, #slides > ul, #slides > ul > li, #slides > ul > li > img, #carousel { */
+    #slides, #carousel, #slides img {
+      width: 512px;
+      height: 288px;
+    }
+
+    .circles {
+      top: 180px;
+    }    
+}
+
+@media only screen and (max-width: 660px) {
+    #slides, #carousel, #slides img {
+      width: 416px;
+      height: 234px;
+    }
+
+    .circles {
+      top: 110px;
+    }  
+
+}
+
+@media only screen and (max-width: 540px) {
+    #slides, #carousel, #slides img {
+      width: 320px;
+      height: 180px;
+    }
+}
+
+@media only screen and (max-width: 440px) {
+    #slides, #carousel, #slides img {
+      width: 160px;
+      height: 90px;
+    }
 }

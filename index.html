@@ -93,38 +93,35 @@
 								<p><i>8 September 2015</i></p>
 							</header>
 
-							<p>Jadi pada minggu lalu saya add dan drop IRS berkali-kali. Sehingga:<br></p>
+							<p>Jadi pada minggu lalu saya add dan drop IRS berkali-kali.....<br></p>
 
-							<button id="readmoreb">yoi</button>
 						</article>
+						<div class="readmoreb" id="readmore_07">read more</div>
 					</div>
 					
 					<div class="outercard">
-						<article>
+						<article id="post_08">
 							<header>
 								<h2><a href="pages/posts/08ResponsiveYoutube.html">Responsive Youtube Embed</a></h2>
 								<p><i>4 September 2015</i></p>
 							</header>
 
-							<p>When designing anything with content (websites, brochures, etc.), if you don’t have the real content, using Lorem Ipsum is the most common way to fill those spaces. However, for anyone who designs regularly and needs such filler text, it is pretty boring to use Lorem Ipsum again and again.<br><br>If you want to try an alternative to Lorem Ipsum, there are several web-based generators which are easy-to-use, customizable and, usually, fun.</p>
-							
-							<div class="videocont">
-								<iframe width="640" height="360" src="http://www.youtube.com/embed/E1oZhEIrer4">
-								</iframe>
-							</div>
+							<p>This is a post for Youtube embeds. When designing anything with content.....</p>
 						</article>
+						<div class="readmoreb" id="readmore_08">read more</div>
 					</div>
 
 					<div class="outercard">
-						<article>
+						<article id="post_06">
 							<header>
 								<h2>Fourth post</h2>
 								<p><i>1 September 2015</i></p>
 							</header>
 
-							<p>When designing anything with content (websites, brochures, etc.), if you don’t have the real content, using Lorem Ipsum is the most common way to fill those spaces. However, for anyone who designs regularly and needs such filler text, it is pretty boring to use Lorem Ipsum again and again.<br><br>If you want to try an alternative to Lorem Ipsum, there are several web-based generators which are easy-to-use, customizable and, usually, fun.</p><br>
+							<p>When designing anything with content (websites, brochures, etc.).....</p>
 
 						</article>
+						<div class="readmoreb" id="readmore_06">read more</div>
 					</div>
 			
 					<div class="outercard">
@@ -188,9 +185,21 @@
 
 	<script>
 	$(document).ready(function(){
-    $("#readmoreb").click(function(){
+    $("#readmore_07").click(function(){
         $("#post_07").load("misc/ajax/content_readMore_07.txt");
+        $("#readmore_07").hide();
     });
+
+    $("#readmore_08").click(function(){
+        $("#post_08").load("misc/ajax/content_readMore_08.txt");
+        $("#readmore_08").hide();
+    });
+
+    $("#readmore_06").click(function(){
+        $("#post_06").load("misc/ajax/content_readMore_06.txt");
+        $("#readmore_06").hide();
+    });
+
 	});
 	</script>
 

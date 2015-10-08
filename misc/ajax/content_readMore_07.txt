@@ -1,0 +1,35 @@
+<header>
+	<h2><a href="pages/posts/07AddAndDrop.html">Add and Drop</a></h2>
+	<p><i>8 September 2015</i></p>
+</header>
+
+<p>Jadi pada minggu lalu saya add dan drop IRS berkali-kali. Sehingga:<br></p>
+
+<table>
+	<tr>
+		<th>Matkul</th>
+		<th>Pindah kelas?</th>
+	</tr>
+	<tr>
+		<td>Matdas 2</td>
+		<td>Ya</td>
+	</tr>
+	<tr>
+		<td>Matdis 2</td>
+		<td>Tidak</td>
+	</tr>
+	<tr>
+		<td>PPW</td>
+		<td>Ya</td>
+	</tr>
+	<tr>
+		<td>Statprob</td>
+		<td>Ya</td>
+	</tr>
+	<tr>
+		<td>POK</td>
+		<td>Tidak</td>
+	</tr>
+</table>
+
+<p id="addme">Untungnya PA-nya baik :'></p>

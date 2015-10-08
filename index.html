@@ -8,9 +8,12 @@
 		<link rel="stylesheet" type="text/css" href="css/basic.css" id="theme_css"/>
 		<link rel="stylesheet" type="text/css" href="css/dropdown.css"/>
 		<link rel="stylesheet" type="text/css" href="dummy" id="dummycss"/>
-		<script src="js/navbar.js" type="text/javascript"></script>
-		<script language="javascript" type="text/javascript" src="js/changeTheme.js"></script>
-		<script language="javascript" type="text/javascript" src="js/idle.js"></script>
+
+		<script type="text/javascript" src="js/jquery-2.1.4.js"></script>
+		<script type="text/javascript" src="js/navbar.js"></script>
+		<script type="text/javascript" src="js/changeTheme.js"></script>
+		<script type="text/javascript" src="js/idle.js"></script>
+
 	</head>
 	<body>
 
@@ -83,76 +86,54 @@
 		<div class="row">
 			<div class="col-8-to-12">
 				<div class="content">
-					<article>
-						<header>
-							<h2><a href="pages/posts/07AddAndDrop.html">Add and Drop</a></h2>
-							<p><i>8 September 2015</i></p>
-						</header>
+					<div class="outercard">
+						<article id="post_07">
+							<header>
+								<h2><a href="pages/posts/07AddAndDrop.html">Add and Drop</a></h2>
+								<p><i>8 September 2015</i></p>
+							</header>
 
-						<p>Jadi pada minggu lalu saya add dan drop IRS berkali-kali. Sehingga:<br></p>
+							<p>Jadi pada minggu lalu saya add dan drop IRS berkali-kali. Sehingga:<br></p>
 
-						<table>
-							<tr>
-								<th>Matkul</th>
-								<th>Pindah kelas?</th>
-							</tr>
-							<tr>
-								<td>Matdas 2</td>
-								<td>Ya</td>
-							</tr>
-							<tr>
-								<td>Matdis 2</td>
-								<td>Tidak</td>
-							</tr>
-							<tr>
-								<td>PPW</td>
-								<td>Ya</td>
-							</tr>
-							<tr>
-								<td>Statprob</td>
-								<td>Ya</td>
-							</tr>
-							<tr>
-								<td>POK</td>
-								<td>Tidak</td>
-							</tr>
-						</table>
-
-						<p>Untungnya PA-nya baik :'></p>
-
-					</article>
+							<button id="readmoreb">yoi</button>
+						</article>
+					</div>
 					
-					<article>
-						<header>
-							<h2><a href="pages/posts/08ResponsiveYoutube.html">Responsive Youtube Embed</a></h2>
-							<p><i>4 September 2015</i></p>
-						</header>
+					<div class="outercard">
+						<article>
+							<header>
+								<h2><a href="pages/posts/08ResponsiveYoutube.html">Responsive Youtube Embed</a></h2>
+								<p><i>4 September 2015</i></p>
+							</header>
 
-						<p>When designing anything with content (websites, brochures, etc.), if you don’t have the real content, using Lorem Ipsum is the most common way to fill those spaces. However, for anyone who designs regularly and needs such filler text, it is pretty boring to use Lorem Ipsum again and again.<br><br>If you want to try an alternative to Lorem Ipsum, there are several web-based generators which are easy-to-use, customizable and, usually, fun.</p>
-						
-						<div class="videocont">
-							<iframe width="640" height="360" src="http://www.youtube.com/embed/E1oZhEIrer4">
-							</iframe>
-						</div>
-					</article>
-					<!-- </div> -->
+							<p>When designing anything with content (websites, brochures, etc.), if you don’t have the real content, using Lorem Ipsum is the most common way to fill those spaces. However, for anyone who designs regularly and needs such filler text, it is pretty boring to use Lorem Ipsum again and again.<br><br>If you want to try an alternative to Lorem Ipsum, there are several web-based generators which are easy-to-use, customizable and, usually, fun.</p>
+							
+							<div class="videocont">
+								<iframe width="640" height="360" src="http://www.youtube.com/embed/E1oZhEIrer4">
+								</iframe>
+							</div>
+						</article>
+					</div>
 
-					<!-- <div class="post"> -->
-					<article>
-						<header>
-							<h2>Fourth post</h2>
-							<p><i>1 September 2015</i></p>
-						</header>
+					<div class="outercard">
+						<article>
+							<header>
+								<h2>Fourth post</h2>
+								<p><i>1 September 2015</i></p>
+							</header>
 
-						<p>When designing anything with content (websites, brochures, etc.), if you don’t have the real content, using Lorem Ipsum is the most common way to fill those spaces. However, for anyone who designs regularly and needs such filler text, it is pretty boring to use Lorem Ipsum again and again.<br><br>If you want to try an alternative to Lorem Ipsum, there are several web-based generators which are easy-to-use, customizable and, usually, fun.</p><br>
+							<p>When designing anything with content (websites, brochures, etc.), if you don’t have the real content, using Lorem Ipsum is the most common way to fill those spaces. However, for anyone who designs regularly and needs such filler text, it is pretty boring to use Lorem Ipsum again and again.<br><br>If you want to try an alternative to Lorem Ipsum, there are several web-based generators which are easy-to-use, customizable and, usually, fun.</p><br>
 
-					</article>
-					<!-- </div> -->
-					<article>
-						<header>
-							<br><a href="pages/archive.html">More posts...</a>
-						</header>
-					</article>
+						</article>
+					</div>
+			
+					<div class="outercard">
+						<article>
+							<header>
+								<br><a href="pages/archive.html">More posts...</a>
+							</header>
+						</article>
+					</div>
 				</div>
 
 			</div>
@@ -204,6 +185,14 @@
 		</footer>
 
 	</div>
+
+	<script>
+	$(document).ready(function(){
+    $("#readmoreb").click(function(){
+        $("#post_07").load("misc/ajax/content_readMore_07.txt");
+    });
+	});
+	</script>
 
 	</body>
 </html>

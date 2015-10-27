@@ -1,3 +1,13 @@
+08 Oktober 2015
+WS5 PPW - AJAX
+George Albert - 1406569781 - Kelas A
+
+Fitur read more di homepage (index.html). Tidak ada fitur dari bonus.
+
+---------------------------
+---------------------------
+---------------------------
+
 01 Oktober 2015
 WS4 PPW - JQuery
 George Albert - 1406569781 - Kelas A

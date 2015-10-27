@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<animals>
+	<animal id="an01">
+		<name>Whewi</name>
+		<type>Cat</type>
+		<tails>Short</tails>
+		<likes>Tomatoes</likes>
+	</animal>
+	<animal id="an02">
+		<name>Choco</name>
+		<type>Iguana</type>
+		<tails>Curvy</tails>
+		<likes>Vanilla</likes>
+	</animal>
+	<animal id="an03">
+		<name>Beakbeak</name>
+		<type>Parrot</type>
+		<tails>None</tails>
+		<likes>Coding</likes>
+	</animal>
+	<animal id="an04">
+		<name>Dunduno</name>
+		<type>Rhino</type>
+		<tails>Yes</tails>
+		<likes>Debugging</likes>
+	</animal>
+</animals>

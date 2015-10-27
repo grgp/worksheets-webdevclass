@@ -110,6 +110,12 @@ div {
   -ms-transform: scale(1.35);
 }
 
+.grow3:hover {
+  transform: scale(1.03);
+  webkit-transform: scale(1.03);
+  -ms-transform: scale(1.03);
+}
+
 /* ------- [END] TRANSITIONS -------- */
 
 /* ------- [END] GLOBAL -------- */
@@ -224,7 +230,7 @@ div {
 	margin-bottom: 20px;
 }
 
-.genericbox, .content > .outercard > article, .navsidebar {
+.genericbox, .content .outercard article, .navsidebar {
 	background-color: #FBFBFB;
 	padding-top: 15px;
 	padding-bottom: 35px;

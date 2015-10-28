@@ -1,62 +1,21 @@
-08 Oktober 2015
-WS5 PPW - AJAX
-George Albert - 1406569781 - Kelas A
+28 Oktober 2015
+Tugas 2 PPW - AJAX dan Web Storage
+George Albert - 1406569781
 
-Fitur read more di homepage (index.html). Tidak ada fitur dari bonus.
+Cara mengakses Tugas 2 adalah kawung.cs.ui.ac.id/~george.albert/tugas2 atau kawung.mhs.cs.ui.ac.id/~george.albert/tugas2
 
----------------------------
----------------------------
----------------------------
+------
 
-01 Oktober 2015
-WS4 PPW - JQuery
-George Albert - 1406569781 - Kelas A
+Code yang dipakai untuk source code javascript banyak mengambil dari sumber yang sama seperti UTS. Adapun kode sumber yang dipakai pada UTS antara lain:
 
-Fitur slides yang diminta di worksheet bisa diakses melalui sidebar atau navigasi website lainnya, yaitu di halaman "Responsive Carousel." File HTML di /pages/posts/09SlidesWithoutFramework.html.
+-------
+-------
 
----------------------------
----------------------------
----------------------------
-Previous notes:
-
-28 September 2015
-Tugas 1 PPW. 
-George Albert - 1406569781 - Kelas A
-
-Kode terletak di folder public_html/tugas1. Halaman2 single post yang ada dan berfungsi adalah kedua halaman paling akhir (recent) yaitu "Add and Drop" dan "Responsive Youtube Embed."
-
----------------------------
-
-Code for Worksheets for the Web Design and Development Fasilkom UI class of 2015.
-
-Tasklist, September 28 2015:
-
-[X] 6 pages
-
-[X] Homepage
-[X] Single post with comments form
-[X] Biodata diri
-[X] Kontak
-[X] Navigasi antara halaman
-[X] Archive
-
---------------------------
-
-[X] JS
-
-[X] Dropdown menu
-[X] Theme
-[X] Comments on single post
-[X] Timed event (popup/alert, idle > 30s)
-
-========================
-
-[X] Misc
-
-[X] Portability and Responsiveness
-[X] Valid HTML + CSS
-[X] Documentation
-[X] Structure
-[X] Indentation 
-[X] Redundancy 
-[X] Variable names
+> http://stackoverflow.com/questions/18884840/adding-a-new-array-element-to-a-json-object
+> http://stackoverflow.com/questions/16417211/load-xml-file-content-into-div-using-jquery
+> http://stackoverflow.com/questions/19632439/how-to-match-credentails-using-xml-on-login-html-page
+> http://stackoverflow.com/questions/17003334/create-a-empty-json-object-from-an-existing-json-object-array
+> http://stackoverflow.com/questions/7346563/loading-local-json-file
+> http://stackoverflow.com/questions/10211145/getting-current-date-and-time-in-javascript
+> http://stackoverflow.com/questions/2010892/storing-objects-in-html5-localstorage
+> http://stackoverflow.com/questions/2342371/jquery-loop-on-json-data-using-each

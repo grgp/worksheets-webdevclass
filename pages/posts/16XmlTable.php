@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 	<head>
 		<!--ws2 HTML5 -->
 		<meta charset="utf-8">
@@ -15,11 +16,55 @@
 		<script language="javascript" type="text/javascript" src="../../js/idle.js"></script>
 		<script src="../../js/postcomment.js" type="text/javascript"></script>
 		<script src="../../js/additionalAJAX.js" type="text/javascript"></script>
+		<script src="../../js/phphelper.js" type="text/javascript"></script>
 		<!--
 		<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300' rel='stylesheet' type='text/css'>
 		-->
 	</head>
-	<body onLoad="showcomments(); displaytable(1)">
+	<body onLoad="showcomments(); displaytable(1);">
+
+<?php
+
+	$nameErr = $emailErr = $commentErr = "";
+	$name = $email = $comment = "";	
+
+	if ($_SERVER["REQUEST_METHOD"] == "POST") {
+		$valid = True;
+
+	  if (empty($_POST["name"])) {
+	    $nameErr = "Name is required"; $valid = False;
+	  } else {
+	    $name = test_input($_POST["name"]);
+	    if (!preg_match("/^[a-z]*$/", $name)) {
+	      $nameErr = "Only lower case letters allowed"; $valid = False;
+	    }
+	  }
+
+	  if (empty($_POST["emailaddr"])) {
+	    $emailErr = "Email is required"; $valid = False;
+	  } else {
+	    $email = test_input($_POST["emailaddr"]);
+	  }
+
+	  if (empty($_POST["comment"])) {
+	    $commentErr = "Comment is required"; $valid = False;
+	  } else {
+	    $comment = test_input($_POST["comment"]);
+	  }
+
+	  if ($valid) {
+	  	echo '<script type="text/javascript">' . 'postParam("' . $name . '", "' . $comment . '");</script>';
+	  }
+
+	}
+
+	function test_input($data) {
+	  $data = trim($data);
+	  $data = stripslashes($data);
+	  $data = htmlspecialchars($data);
+	  return $data;
+	}
+	?>
 
 	<div class="row">
 		<div class="navhead">
@@ -57,44 +102,30 @@
 						</article>
 					</div>
 				</div>
-
+=
 				<div class="genericbox">
 				<h3 style="margin-left: 15px; color: #555555">comments</h3>
 				<br>
-					<ul id="comments">
-						<!--
-						<li>
-							Stan<br>
-							<p>How amazing</p>
-							<hr><br>
-						</li>
-						<li>
-							Andy<br>
-							<p>So interesting<p>
-							<hr><br>
-						</li>
-						-->
-					</ul>
-
-					<br> <hr> <br>
+					<ul id="comments"> </ul> <br> <hr> <br>
 
 					<div class="commentbox">
-					Your comment:<br>
+					Your comment: <br>
 					<form method="post" action='' id="commentform">
 						<input type="text" name="name" id="formname" placeholder="Name is required">
-						<span class="error">o errors so far</span>
+							<span class="error" style="color: #dd6666">&nbsp;&nbsp;&nbsp;<?php echo $nameErr?></span>
 						<br>
-						<input type="email" name="emailaddr" id="formemail" placeholder="E-mail is optional"><br>
+						<input type="text" name="emailaddr" id="formemail" placeholder="E-mail is optional">
+							<span class="error" style="color: #dd6666">&nbsp;&nbsp;&nbsp;<?php echo $emailErr?></span>
+						<br>
 						<!--
 						<input type="text" name="comment" id="formtext" required pattern=".{20,}" placeholder="Jangan pendek2 yaa :)"><br>
 						-->
-						<textarea name="comment" form="commentform" id="formarea"></textarea><br>
-						<input type="submit" value="Submit" onclick="post()">
+						<textarea name="comment" form="commentform" id="formarea"></textarea>
+							<span class="error" style="color: #dd6666">&nbsp;&nbsp;&nbsp;<?php echo $commentErr?></span>
+						<br>
+						<input type="submit" value="Submit" onclick="postParam()">
 					</form>
-					<?php echo "<h2>Your Input:</h2>";?>
-					
-
-					
+										
 				</div>
 				</div>
 

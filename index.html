@@ -21,14 +21,14 @@
 
 
 	</head>
-	<body onLoad="cleansession(); showposts(4); displaytable(1)">
+	<body onLoad="cleansession(); showposts(4); displaytable(1); showStats()">
 
 	<div class="row">
 		<div class="navhead">
 			<div class="navheadcont">
 				<h3>the blog blog</h3>
 				<ul class="navheadmenus">
-					<li><a href="../index.html">home</a></li>
+					<li><a href="index.html">home</a></li>
 					<li><a href="pages/archive.html">archive</a></li>
 					<li><a href="pages/about.html">about</a>
 					<li><a href="pages/contact.html">contact</a>
@@ -98,7 +98,7 @@
 
 					<div id="loadButton" onClick="showadditional()">
 						<div class="outercard grow3">
-							<div class="readmoreb">more posts</div>
+							<div class="readmoreb"><br>more posts</div>
 						</div>
 					</div>
 
@@ -146,6 +146,22 @@
 							</li>
 						</ul>
 					</div>
+				</div>
+
+				<div class="navsidebar grow stats">
+					<ul>
+						<li><b>Statistics for Visitors</b></li>
+						<li>
+							<li id="g_visit">Visited today: 0</li>
+							<li id="g_short">Has a short name: 0</li>
+							<li id="g_long">Has a long name: 0</li>
+							<li id="g_mongol">Is from Mongolia: 0</li>
+						</li>
+						<br>
+						<hr>
+
+						<li><b><i><a href="pages/guestbook.html">Guestbook</a></i></b></li>
+					</ul>
 				</div>
 			</div>
 		</div>

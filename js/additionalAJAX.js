@@ -30,15 +30,42 @@ function displaytable(n) {
 function post() {
   var name = $('#formname').val();
   var text = $('#formarea').val();
+  var loca = $('#formloca').val();
 
   if (name.length < 1 || text.length < 3) {
     return false;
   }
 
-  var comment =
-    (
-      '<li>' + name + '<br><p>' + text + '</p><hr><br>'
-    );
+  var comment;
+  if ($('title').text() == "The Blog Blog | Guestbook") {
+
+    comment = ('<li>' + name + '<br><i class="commenterLoc">from ' + loca + '</i><p>' + text + '</p><hr><br>');
+    var guestArray = localStorage.getItem('guestArray');
+    if (!guestArray) {
+      var statsArray = {
+                          'visitors': 0,
+                          'shortName': 0,
+                          'longName': 0,
+                          'fromMongolia': 0
+                        };
+      localStorage.setItem('guestArray', JSON.stringify(statsArray));
+    }
+    
+    guestArray = localStorage.getItem('guestArray');
+    var guestJson = jQuery.parseJSON(guestArray);
+
+    guestJson.visitors += 1;
+    if (name.length < 6)
+      guestJson.shortName += 1;
+    else
+      guestJson.longName += 1;
+    if (loca.toUpperCase() == "MONGOLIA")
+      guestJson.fromMongolia += 1;
+
+    localStorage.setItem('guestArray', JSON.stringify(guestJson));
+  }
+  else
+    comment = ('<li>' + name + '<br><p>' + text + '</p><hr><br>');
 
   $('#comments').append(comment);
   var commentsArray = localStorage.getItem('commentsArray');
@@ -59,6 +86,16 @@ function post() {
   commentsJson.push(commCell);
   localStorage.setItem('commentsArray', JSON.stringify(commentsJson));
 
+}
+
+function showStats() {
+  var guestArray = localStorage.getItem('guestArray');
+  var guestJson = jQuery.parseJSON(guestArray);
+
+  document.getElementById('g_visit').innerHTML = "Visited today: " + guestJson.visitors;
+  document.getElementById('g_short').innerHTML = "Has a short name: " + guestJson.shortName;
+  document.getElementById('g_long').innerHTML = "Has a long name: " + guestJson.longName;
+  document.getElementById('g_mongol').innerHTML = "Is from Mongolia: " + guestJson.fromMongolia;
 }
 
 function showcomments() {
@@ -95,7 +132,6 @@ function showposts(n) {
 		var outerCounter = counter;
 		for (var j = counter; j < n+outerCounter && j < json.length; j++) {
 			var post = json[j];
-			console.log("counter: " + outerCounter + " | n: " + n + " | j: " + j + " | counter: " + counter);
 			var postcell = (
 					'<div class="outercard grow3">' +
 						'<article id="post_' + post.id + '">' +
@@ -106,7 +142,6 @@ function showposts(n) {
 			$('#postlist').append(postcell);
 			counter = counter + 1;
 			if (j == json.length - 1) {
-				console.log("reachme");
 				deleteLoadButton();
 			}
 		}

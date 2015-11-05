@@ -242,6 +242,10 @@ div {
 	font-size: 15px;
 }
 
+.stats {
+	color: #505050;
+}
+
 .readmoreb {
 	background-color: #47c6ed;
 	color: white;

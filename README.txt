@@ -1,28 +1,17 @@
-28 Oktober 2015
-Tugas 2 PPW - AJAX dan Web Storage
+5 November 2015
+WS 6 PPW - PHP Validation
 George Albert - 1406569781
 
-- Cara mengakses Tugas 2 adalah kawung.cs.ui.ac.id/~george.albert/tugas2 atau kawung.mhs.cs.ui.ac.id/~george.albert/tugas2
+- Cara mengakses WS 6 adalah kawung.cs.ui.ac.id/~george.albert/ws6 atau kawung.mhs.cs.ui.ac.id/~george.albert/ws6
 
-- Halaman yang diimplementasikan fitur load posts dari JSON adalah index.html
+- Halaman yang diimplementasikan fitur validasi adalah halaman "XML Table", bisa diakses dari sidebar index.html, dan punya link di /pages/posts/16XmlTable.php
 
-- Halaman-halaman yang sudah diimplementasi fitur post display comments menggunakan JSON dan Web Storage adalah "XML Table" (pages/posts/16XmlTable.html) dan "The Nth Post" (pages/posts/15TheNthPost.html)
+- Halaman-halaman selain itu tidak diimplementasikan
 
-- Halaman-halaman yang diimplementasi fitur ambil data dari XML untuk tabel adalah halaman "XML Table" diatas
+- Soal bonus dikerjakan karena langsung menampilkan comment setelah post
 
-- Hasil soal bonus dapat dilihat di sidebar kanan, kotak yang kedua.
-
-- Laporan alidasi JSHint yang mungkin perlu diperhatikan hanya karena ada function dalam loop, namun itu memang diperlukan karena perlu diiterasi elemen-elemen dalam node-node tersebut. Diasumsikan  jQuery dan "ignore unused variables" krn external js memakai method dari luar.
+- Agar PHP bisa dijalankan harus dijalankan melalui server atau localhost
 
 ------
 
-- Code yang dipakai untuk source code javascript banyak mengambil dari sumber yang sama seperti UTS. Adapun kode sumber yang dipakai pada UTS antara lain:
-
-> http://stackoverflow.com/questions/18884840/adding-a-new-array-element-to-a-json-object
-> http://stackoverflow.com/questions/16417211/load-xml-file-content-into-div-using-jquery
-> http://stackoverflow.com/questions/19632439/how-to-match-credentails-using-xml-on-login-html-page
-> http://stackoverflow.com/questions/17003334/create-a-empty-json-object-from-an-existing-json-object-array
-> http://stackoverflow.com/questions/7346563/loading-local-json-file
-> http://stackoverflow.com/questions/10211145/getting-current-date-and-time-in-javascript
-> http://stackoverflow.com/questions/2010892/storing-objects-in-html5-localstorage
-> http://stackoverflow.com/questions/2342371/jquery-loop-on-json-data-using-each
+- Code yang dipakai untuk source code berasal dari w3schools bagian PHP validation dan beberapa pertanyaan stack overflow

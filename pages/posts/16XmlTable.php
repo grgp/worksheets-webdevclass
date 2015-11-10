@@ -44,6 +44,9 @@
 	    $emailErr = "Email is required"; $valid = False;
 	  } else {
 	    $email = test_input($_POST["emailaddr"]);
+	    if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+	    	$emailErr = "Email is invalid"; $valid = False;
+	    }
 	  }
 
 	  if (empty($_POST["comment"])) {
@@ -53,7 +56,12 @@
 	  }
 
 	  if ($valid) {
+	  	$nameErr = "";
+	  	$emailErr = "";
+	  	$commentErr = "";
 	  	echo '<script type="text/javascript">' . 'postParam("' . $name . '", "' . $comment . '");</script>';
+	  } else {
+
 	  }
 
 	}
@@ -109,17 +117,20 @@
 					<ul id="comments"> </ul> <br> <hr> <br>
 
 					<div class="commentbox">
-					Your comment: <br>
+					<b>Your comment: </b> <br>
 					<form method="post" action='' id="commentform">
+						<p>Name:</p>
 						<input type="text" name="name" id="formname" placeholder="Name is required">
 							<span class="error" style="color: #dd6666">&nbsp;&nbsp;&nbsp;<?php echo $nameErr?></span>
 						<br>
+						<p>E-mail:</p>
 						<input type="text" name="emailaddr" id="formemail" placeholder="E-mail is optional">
 							<span class="error" style="color: #dd6666">&nbsp;&nbsp;&nbsp;<?php echo $emailErr?></span>
 						<br>
 						<!--
 						<input type="text" name="comment" id="formtext" required pattern=".{20,}" placeholder="Jangan pendek2 yaa :)"><br>
 						-->
+						<p>Comment:</p>
 						<textarea name="comment" form="commentform" id="formarea"></textarea>
 							<span class="error" style="color: #dd6666">&nbsp;&nbsp;&nbsp;<?php echo $commentErr?></span>
 						<br>

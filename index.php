@@ -1,8 +1,5 @@
 <?php
 	session_start();
-	if(!isset($_SESSION["userlogin"])){
-		header("Location: pages/login.php");
-	}
 ?>
 
 <!DOCTYPE html>
@@ -56,7 +53,6 @@
 				<h3>Well... this is a blog, I guess.</h3>
 				<h3><a href="pages/login.php">Login</a></h3>
 				<h3><a href="pages/logout.php">Logout</a></h3>
-				<h3><?php echo "Welcome " . $_SESSION["userlogin"];?></h3>
 		</div>
 		<div class="row">
 			<div class="featuredrow">
@@ -118,11 +114,25 @@
 			<div class="col-4-to-12">
 				<div class="navsidebar grow stats">
 					<ul>
-						<li>logged in as <b><?php echo $_SESSION["userlogin"];?></b></li>
+						<li><b>
+							<?php 
+								if (isset($_SESSION["userlogin"])) {
+									echo "logged in as " . $_SESSION["userlogin"];
+								}
+							?>
+						</b></li>
 						<br>
 						<hr>
 
-						<li><b><i><a href="pages/logout.php">Logout</a></i></b></li>
+						<li><b><i>
+							<?php
+								if (isset($_SESSION["userlogin"])) {
+									echo '<a href="pages/logout.php">Logout</a>';
+								} else {
+									echo '<a href="pages/login.php">Login</a>';
+								}
+							?>
+						</a></i></b></li>
 					</ul>
 				</div>
 

@@ -2,6 +2,10 @@
 	require "../php/database.php";
 	session_start();
 
+	if(!isset($_SESSION["userlogin"])){
+		header("Location: pages/login.php");
+	}
+
 	$conn = connectDB();
 	$start = 0;
 	if(isset($_GET["num"])){

@@ -1,10 +1,83 @@
+<?php
+	require "../php/database.php";
+	session_start();
+
+	$conn = connectDB();
+	$start = 0;
+	if(isset($_GET["num"])){
+		$start = $_GET["num"];
+	}
+	
+	//$query = "SELECT username, email FROM users LIMIT 3 OFFSET ".$start; 
+	$query = "SELECT name, content FROM comments LIMIT 50 OFFSET ".$start; 
+	
+	$result = $conn->query($query);
+	
+	$query2 = "SELECT COUNT(*) as number FROM users";
+	
+	$result2 = $conn->query($query2);
+	$number = 0;
+	if ($result2->num_rows > 0) {
+		$row = $result2->fetch_assoc();
+		$number = $row["number"];
+	}
+
+	// POST COMMENT
+
+	$username = $_SESSION["userlogin"];
+	
+	$sql2 = "SELECT * FROM users WHERE username='$username'";
+	$result2 = mysqli_query($conn, $sql2);
+	while($row2 = $result2->fetch_assoc()) {
+		$email = $row2["email"];
+	}
+
+	$commentErr = "";
+	$comment = "";	
+
+	if ($_SERVER["REQUEST_METHOD"] == "POST") {
+		$valid = True;
+
+	  if (empty($_POST["comment"])) {
+	    $commentErr = "Comment is required"; $valid = False;
+	  } elseif ( (strlen($comment) > 144)) {
+	  	$commentErr = "Comments can't be longer than 144 characters"; $valid = False;
+		} else {
+	    $comment = test_input($_POST["comment"]);
+	  }
+
+	  if ($valid) {
+	  	$commentErr = "";
+	  	
+	  	$sql = "INSERT into comments (name, email, content) VALUES('$username','$email','$comment')";
+	
+			if(mysqli_query($conn, $sql)) {
+				$resp2 = "recorded";
+			} else{
+				$resp2 = "not recorded";
+			}
+
+			header("Location: daftar_user4.php");
+
+	  }
+
+	}
+
+	function test_input($data) {
+	  $data = trim($data);
+	  $data = stripslashes($data);
+	  $data = htmlspecialchars($data);
+	  return $data;
+	}
+
+?>
+
 <!DOCTYPE html>
 <html>
 	<head>
-		<!--ws2 HTML5 -->
 		<meta charset="utf-8">
 		<meta name="description" content="Currently an empty blog.">
-		<title>The Blog Blog | Guestbook</title>
+		<title>The Blog Blog | New Guestbook</title>
 		<link rel="stylesheet" type="text/css" href="../css/basic.css" id="theme_css"/>
 		<link rel="stylesheet" type="text/css" href="../css/posts.css"/>
 		<link rel="stylesheet" type="text/css" href="../css/dropdown.css"/>
@@ -15,11 +88,8 @@
 		<script type="text/javascript" src="../js/changeTheme.js"></script>
 		<script type="text/javascript" src="../js/idle.js"></script>
 		<script src="../js/additionalAJAX.js" type="text/javascript"></script>
-		<!--
-		<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300' rel='stylesheet' type='text/css'>
-		-->
 	</head>
-	<body onload="showcomments(); showStats()">
+	<body>
 
 	<div class="row">
 		<div class="navhead">

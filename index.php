@@ -116,6 +116,16 @@
 			</div>
 
 			<div class="col-4-to-12">
+				<div class="navsidebar grow stats">
+					<ul>
+						<li>logged in as <b><?php echo $_SESSION["userlogin"];?></b></li>
+						<br>
+						<hr>
+
+						<li><b><i><a href="pages/logout.php">Logout</a></i></b></li>
+					</ul>
+				</div>
+
 				<div class="navsidebar grow">
 					<div class="calendar">
 					</div>

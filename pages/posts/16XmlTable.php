@@ -117,27 +117,26 @@
 					<ul id="comments"> </ul> <br> <hr> <br>
 
 					<div class="commentbox">
-					<b>Your comment: </b> <br>
-					<form method="post" action='' id="commentform">
-						<p>Name:</p>
-						<input type="text" name="name" id="formname" placeholder="Name is required">
-							<span class="error" style="color: #dd6666">&nbsp;&nbsp;&nbsp;<?php echo $nameErr?></span>
-						<br>
-						<p>E-mail:</p>
-						<input type="text" name="emailaddr" id="formemail" placeholder="E-mail is optional">
-							<span class="error" style="color: #dd6666">&nbsp;&nbsp;&nbsp;<?php echo $emailErr?></span>
-						<br>
-						<!--
-						<input type="text" name="comment" id="formtext" required pattern=".{20,}" placeholder="Jangan pendek2 yaa :)"><br>
-						-->
-						<p>Comment:</p>
-						<textarea name="comment" form="commentform" id="formarea"></textarea>
-							<span class="error" style="color: #dd6666">&nbsp;&nbsp;&nbsp;<?php echo $commentErr?></span>
-						<br>
-						<input type="submit" value="Submit" onclick="postParam()">
-					</form>
-										
-				</div>
+						<b>Your comment: </b> <br>
+						<form method="post" action='' id="commentform">
+							<p>Name:</p>
+							<input type="text" name="name" id="formname" placeholder="Name is required">
+								<span class="error" style="color: #dd6666">&nbsp;&nbsp;&nbsp;<?php echo $nameErr?></span>
+							<br>
+							<p>E-mail:</p>
+							<input type="text" name="emailaddr" id="formemail" placeholder="E-mail is optional">
+								<span class="error" style="color: #dd6666">&nbsp;&nbsp;&nbsp;<?php echo $emailErr?></span>
+							<br>
+							<!--
+							<input type="text" name="comment" id="formtext" required pattern=".{20,}" placeholder="Jangan pendek2 yaa :)"><br>
+							-->
+							<p>Comment:</p>
+							<textarea name="comment" form="commentform" id="formarea"></textarea>
+								<span class="error" style="color: #dd6666">&nbsp;&nbsp;&nbsp;<?php echo $commentErr?></span>
+							<br>
+							<input type="submit" value="Submit" onclick="postParam()">
+						</form>					
+					</div>
 				</div>
 
 			</div>

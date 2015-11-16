@@ -1,6 +1,6 @@
 /* Original code by AnhSirk Dasarp on Stack Overflow */
 
-var timeout = 300;
+var timeout = 3000;
 var counter = 0;
 
 document.onclick = function() {

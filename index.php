@@ -1,3 +1,10 @@
+<?php
+	session_start();
+	if(!isset($_SESSION["userlogin"])){
+		header("Location: pages/login.php");
+	}
+?>
+
 <!DOCTYPE html>
 <html>
 	<head>
@@ -28,7 +35,7 @@
 			<div class="navheadcont">
 				<h3>the blog blog</h3>
 				<ul class="navheadmenus">
-					<li><a href="index.html">home</a></li>
+					<li><a href="index.php">home</a></li>
 					<li><a href="pages/archive.html">archive</a></li>
 					<li><a href="pages/about.html">about</a>
 					<li><a href="pages/contact.html">contact</a>
@@ -48,6 +55,8 @@
 				<h1>the blog blog</h1>
 				<h3>Well... this is a blog, I guess.</h3>
 				<h3><a href="pages/login.php">Login</a></h3>
+				<h3><a href="pages/logout.php">Logout</a></h3>
+				<h3><?php echo "Welcome " . $_SESSION["userlogin"];?></h3>
 		</div>
 		<div class="row">
 			<div class="featuredrow">

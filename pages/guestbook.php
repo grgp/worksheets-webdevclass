@@ -3,7 +3,7 @@
 	session_start();
 
 	if(!isset($_SESSION["userlogin"])){
-		header("Location: pages/login.php");
+		header("Location: login.php");
 	}
 
 	$conn = connectDB();
@@ -170,9 +170,9 @@
 						<li><b><i>
 							<?php
 								if (isset($_SESSION["userlogin"])) {
-									echo '<a href="pages/logout.php">Logout</a><br><br><hr><a href="pages/guestbook.php">Guestbook</a>';
+									echo '<a href="logout.php">Logout</a><br><br><hr><a href="pages/guestbook.php">Guestbook</a>';
 								} else {
-									echo '<a href="pages/login.php">Login</a>';
+									echo '<a href="login.php">Login</a>';
 								}
 							?>
 						</i></b></li>

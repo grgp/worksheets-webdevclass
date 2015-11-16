@@ -189,7 +189,7 @@
 						<br>
 						<hr>
 
-						<li><b><i><a href="pages/guestbook.html">Guestbook</a></i></b></li>
+						<li><b><i><a href="pages/guestbook.html">Old Guestbook</a></i></b></li>
 					</ul>
 				</div>
 			</div>

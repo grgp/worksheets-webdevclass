@@ -68,18 +68,20 @@
 					<form method="get" action='login.php' id="commentform">
 						<p>Username:</p>
 						<input type="text" name="username" id="loginname">
-							<span class="error" style="color: #dd6666">&nbsp;&nbsp;&nbsp;<?php echo $resp2?></span>
+							<span class="error" style="color: #dd6666"><br><?php echo $respUser?></span>
 						<br>
 						<p>Email:</p>
 						<input type="text" name="email" id="loginname">
-							<span class="error" style="color: #dd6666">&nbsp;&nbsp;&nbsp;<?php echo $resp2?></span>
+							<span class="error" style="color: #dd6666"><br><?php echo $respEmail?></span>
 						<br>
 						<p>Password:</p>
 						<input type="password" name="password" id="loginpass">
-							<span class="error" style="color: #dd6666">&nbsp;&nbsp;&nbsp;<?php echo $resp2?></span>
+							<span class="error" style="color: #dd6666"><br><?php echo $respPass?></span>
 						<br>
 						<br>
-						<input type="submit" value="Submit">
+						<input type="submit" value="Submit"><br><br>
+
+						<?php echo $resp2?>
 					</form>
 				</div>
 			</div>

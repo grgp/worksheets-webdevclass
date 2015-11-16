@@ -3,6 +3,9 @@
 
 	$resp = "";
 	$resp2 = "";
+	$respUser = "";
+	$respEmail = "";
+	$respPass = "";
 	$email = "";
 	if(isset($_POST["username"])){
 		$resp = login($_POST["username"], $_POST["password"]);
@@ -23,12 +26,22 @@
 			$sql = "INSERT into users (username, email, password) VALUES('$username','$email','$password')";
 		
 			if(mysqli_query($conn, $sql)) {
-				$resp2 = "recorded";
+				$resp2 = "registration successful, you can login now";
 			} else{
-				$resp2 = "not recorded";
+				$resp2 = "";
 			}
 	  } else {
-	  	$resp2 = "the username or email or password entered is correct";
+		  	if ( !ctype_lower($username) ) {
+		  		$respUser = "the username must all be lowercase alphabet";
+		  	}
+
+		  	if ( !ctype_alnum($password) ) {
+	  			$respPass = "the password must be alphanumeric";
+	  		}
+
+	  		if ( !filter_var($email, FILTER_VALIDATE_EMAIL) ) {
+	  			$respEmail = "the email address is invalid";
+	  		}
 	  }
 
 	}

@@ -43,24 +43,47 @@
 	</div>
 
 	<div class="container">
-		<div class="row">
-			<div class="loginbox">
+		<div class="row loginbox">
+			<div class="col-1-to-12">&nbsp;</div>
+			<div class="col-4-to-12">
 				<div class="genericbox" id="aboutpic">
 				<h3>Login</h3>
 					<form method="post" action='login.php' id="commentform">
 						<p>Username:</p>
 						<input type="text" name="username" id="loginname">
-							<span class="error" style="color: #dd6666">&nbsp;&nbsp;&nbsp;<?php echo $resp?></span>
 						<br>
 						<p>Password:</p>
 						<input type="password" name="password" id="loginpass">
-							<span class="error" style="color: #dd6666">&nbsp;&nbsp;&nbsp;<?php echo $resp?></span>
+						<br>
+						<br>
+						<input type="submit" value="Submit">
+						<span class="error" style="color: #dd6666">&nbsp;&nbsp;&nbsp;<?php echo $resp?></span>
+					</form>
+				</div>
+			</div>
+			<div class="col-1-to-12">&nbsp;</div>
+			<div class="col-4-to-12">
+				<div class="genericbox" id="aboutpic">
+				<h3>Register</h3>
+					<form method="get" action='login.php' id="commentform">
+						<p>Username:</p>
+						<input type="text" name="username" id="loginname">
+							<span class="error" style="color: #dd6666">&nbsp;&nbsp;&nbsp;<?php echo $resp2?></span>
+						<br>
+						<p>Email:</p>
+						<input type="text" name="email" id="loginname">
+							<span class="error" style="color: #dd6666">&nbsp;&nbsp;&nbsp;<?php echo $resp2?></span>
+						<br>
+						<p>Password:</p>
+						<input type="password" name="password" id="loginpass">
+							<span class="error" style="color: #dd6666">&nbsp;&nbsp;&nbsp;<?php echo $resp2?></span>
 						<br>
 						<br>
 						<input type="submit" value="Submit">
 					</form>
 				</div>
 			</div>
+			<div class="col-2-to-12"></div>
 		</div>
 
 		<footer>

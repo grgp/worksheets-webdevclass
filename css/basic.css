@@ -92,6 +92,11 @@ hr {
 	width: 16.6%;
 }
 
+.col-1-to-12 {
+	float: left;
+	width: 8.3%;
+}
+
 /* ------- TRANSITIONS -------- */
 
 div {
@@ -306,10 +311,15 @@ footer {
 
 .commentbox {
 	margin-left: 15px;
+	color: #505050;
 }
 
 .commentbox #commentform > input {
 	margin-bottom: 8px;
+}
+
+.guestoffset {
+	margin-top: 20px;
 }
 
 /* ------- RESPONSIVE -------- */

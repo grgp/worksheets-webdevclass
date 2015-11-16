@@ -61,7 +61,7 @@
 				$resp2 = "not recorded";
 			}
 
-			header("Location: daftar_user4.php");
+			header("Location: guestbook.php");
 
 	  }
 
@@ -126,58 +126,58 @@
 
 				<div class="genericbox">
 
-				<h3 style="margin-left: 15px; color: #555555">Statistics for Visitors</h3>
-				<ul>
-					<li>
-							<li id="g_visit">Visited today: 0</li>
-							<li id="g_short">Has a short name: 0</li>
-							<li id="g_long">Has a long name: 0</li>
-							<li id="g_mongol">Is from Mongolia: 0</li>
-					</li>
-					<br>
-					<br>
-					<hr>
-				</ul>
-
-				<h3 style="margin-left: 15px; color: #555555">comments</h3>
-					<ul id="comments">
-						<!--
-						<li>
-							Stan<br>
-							<p>How amazing</p>
-							<hr><br>
-						</li>
-						<li>
-							Andy<br>
-							<p>So interesting<p>
-							<hr><br>
-						</li>
-						-->
+					<h3 style="margin-left: 15px; color: #555555">comments</h3>
+					<ul id="comments"><br>
+						<?php	
+							if ($result->num_rows > 0) {
+								while($row = $result->fetch_assoc()){
+									echo "<li>".$row['name']."<br><p>".$row['content']."</p><hr><br></li>";
+								}
+							}	
+						?>
 					</ul>
 
 					<br> <hr> <br>
 					
 					<div class="commentbox">
-					Your comment:<br>
-					<form id="commentform">
-						<input type="text" name="name" id="formname" required placeholder="Name is required"><br>
-						<input type="email" name="emailaddr" id="formemail" placeholder="E-mail is optional"><br>
-						<input type="text" name="location" id="formloca" placeholder="Country currently on"><br>
-						<!--
-						<input type="text" name="comment" id="formtext" required pattern=".{20,}" placeholder="Jangan pendek2 yaa :)"><br>
-						-->
-					</form>
-					
-					<textarea name="comment" form="commentform" id="formarea"></textarea><br>
-					<input type="button" value="Submit" onclick="post()">
+						<h3>Your comment: </h3> <br>
+						<form method="post" action='guestbook.php' id="commentform">
+							<textarea name="comment" form="commentform" id="formarea" rows="4" cols="50"></textarea>
+								<span class="error" style="color: #dd6666">&nbsp;&nbsp;&nbsp;<?php echo $commentErr?></span>
+							<br>
+							<input type="submit" value="Submit">
+						</form>					
+					</div>
 
-					
 				</div>
-				</div>
-
 			</div>
 
 			<div class="col-4-to-12">
+				<div class="navsidebar grow stats guestoffset">
+					<ul>
+						<li>
+							<?php 
+								if (isset($_SESSION["userlogin"])) {
+									echo "logged in as <b>" . $_SESSION["userlogin"] . "</b>";
+								} else {
+									echo '<li>login to access the guestbook</li>';
+								}
+							?>
+						</li>
+						<br>
+						<hr>
+
+						<li><b><i>
+							<?php
+								if (isset($_SESSION["userlogin"])) {
+									echo '<a href="pages/logout.php">Logout</a><br><br><hr><a href="pages/guestbook.php">Guestbook</a>';
+								} else {
+									echo '<a href="pages/login.php">Login</a>';
+								}
+							?>
+						</i></b></li>
+					</ul>
+				</div>
 				<div class="navsidebar">
 					<div class="calendar">
 					</div>

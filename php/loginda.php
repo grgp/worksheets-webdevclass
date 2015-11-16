@@ -41,7 +41,7 @@
 		$result = mysqli_query($conn, $sql);
 		if (mysqli_num_rows($result) <= 0) {
 			mysqli_close($conn);
-			return "no username found";
+			return "username not found";
 		}
 
 		while($row = $result->fetch_assoc()) {

@@ -51,8 +51,6 @@
 		<div class="row">
 				<h1>the blog blog</h1>
 				<h3>Well... this is a blog, I guess.</h3>
-				<h3><a href="pages/login.php">Login</a></h3>
-				<h3><a href="pages/logout.php">Logout</a></h3>
 		</div>
 		<div class="row">
 			<div class="featuredrow">
@@ -112,27 +110,29 @@
 			</div>
 
 			<div class="col-4-to-12">
-				<div class="navsidebar grow stats">
+				<div class="navsidebar grow">
 					<ul>
-						<li><b>
+						<li>
 							<?php 
 								if (isset($_SESSION["userlogin"])) {
-									echo "logged in as " . $_SESSION["userlogin"];
+									echo "logged in as <b>" . $_SESSION["userlogin"] . "</b>";
+								} else {
+									echo '<li>login to access the guestbook</li>';
 								}
 							?>
-						</b></li>
+						</li>
 						<br>
 						<hr>
 
 						<li><b><i>
 							<?php
 								if (isset($_SESSION["userlogin"])) {
-									echo '<a href="pages/logout.php">Logout</a>';
+									echo '<a href="pages/logout.php">Logout</a><br><br><hr><a href="pages/guestbook.php">Guestbook</a>';
 								} else {
 									echo '<a href="pages/login.php">Login</a>';
 								}
 							?>
-						</a></i></b></li>
+						</i></b></li>
 					</ul>
 				</div>
 
@@ -204,20 +204,3 @@
 
 	</body>
 </html>
-
-<!--
-
-					<div class="outercard">
-						<article id="post_06">
-							<header>
-								<h2>Fourth post</h2>
-								<p><i>1 September 2015</i></p>
-							</header>
-
-							<p>When designing anything with content (websites, brochures, etc.).....</p>
-
-						</article>
-						<div class="readmoreb" id="readmore_06">read more</div>
-					</div>
-
--->

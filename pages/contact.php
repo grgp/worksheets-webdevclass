@@ -1,12 +1,23 @@
+<?php
+	session_start();
+
+	if(!isset($_SESSION["userlogin"])){
+		header("Location: login.php");
+
+	}
+
+?>
+
 <!DOCTYPE html>
 <html>
 	<head>
+		<!--ws2 HTML5 -->
 		<meta charset="utf-8">
 		<meta name="description" content="Currently an empty blog.">
-		<title>The Blog Blog | About</title>
+		<title>The Blog Blog | Contact</title>
 		<link rel="stylesheet" type="text/css" href="../css/basic.css"/>
-		<link rel="stylesheet" type="text/css" href="../css/dropdown.css"/>
 		<link rel="stylesheet" type="text/css" href="../css/pages.css"/>
+		<link rel="stylesheet" type="text/css" href="../css/dropdown.css"/>
 		<link rel="stylesheet" type="text/css" href="dummy" id="dummycss"/>
 		<script src="../js/navbar.js" type="text/javascript"></script>
 		<script language="javascript" type="text/javascript" src="../js/changeTheme.js"></script>
@@ -21,9 +32,9 @@
 				<h3>the blog blog</h3>
 				<ul class="navheadmenus">
 					<li><a href="../index.php">home</a></li>
-					<li><a href="../pages/archive.html">archive</a></li>
-					<li><a href="../pages/about.html">about</a>
-					<li><a href="../pages/contact.html">contact</a>
+					<li><a href="../pages/archive.php">archive</a></li>
+					<li><a href="../pages/about.php">about</a>
+					<li><a href="../pages/contact.php">contact</a>
 					<li><a href="#" onclick="dropdown()">themes</a>
 						<ul id="navheadinside">
 							<li><a href="#" onclick="changeTheme('../css/dummycss.css')">orange</a></li>
@@ -37,7 +48,7 @@
 
 	<div class="container">
 		<div class="row pagetitle">
-			<h2>About</h2>
+			<h2>Contact</h2>
 		</div>
 		<div class="row">
 			<div class="col-4-to-12">
@@ -51,18 +62,20 @@
 					<div class="outercard">
 						<article id="largertext">
 							<header>
-								<h2>About George</h2>
+								<h2>George Albert Pitoy</h2>
 							</header>
+							<p>Student at the Computer Science Faculty of University of Indonesia</p>
 
-							<p>When designing anything with content (websites, brochures, etc.), if you don’t have the real content, using Lorem Ipsum is the most common way to fill those spaces. However, for anyone who designs regularly and needs such filler text, it is pretty boring to use Lorem Ipsum again and again.<br><br>
+							<p>NPM: 1406569781</p>
 
-							If you want to try an alternative to Lorem Ipsum, there are several web-based generators which are easy-to-use, customizable and, usually, fun.<br><br>
+							<p>E-mail: g.a.pitoy [at] gmail (dot)[com]
+							<i>(Because spammer bots are annoying)</i></p>
 
-							Lorem Ipsum is the most common way to fill those spaces. However, for anyone who designs regularly and needs such filler text, it is pretty boring to use Lorem Ipsum again and again.</p><br>
+							<p>Github: <a href="https://github.com/grgp">grgp</a>
+							<br><br>
 
 						</article>
 					</div>
-					<!-- </div> -->
 				</div>
 			</div>
 
@@ -76,4 +89,4 @@
 	</div>
 
 	</body>
-</html>
+</html>	

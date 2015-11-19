@@ -1,5 +1,10 @@
 <?php
 	session_start();
+
+	if(!isset($_SESSION["userlogin"])){
+		header("Location: pages/login.php");
+	}
+
 ?>
 
 <!DOCTYPE html>
@@ -33,9 +38,9 @@
 				<h3>the blog blog</h3>
 				<ul class="navheadmenus">
 					<li><a href="index.php">home</a></li>
-					<li><a href="pages/archive.html">archive</a></li>
-					<li><a href="pages/about.html">about</a>
-					<li><a href="pages/contact.html">contact</a>
+					<li><a href="pages/archive.php">archive</a></li>
+					<li><a href="pages/about.php">about</a>
+					<li><a href="pages/contact.php">contact</a>
 					<li onclick="dropdown()">themes
 						<ul id="navheadinside">
 							<li><a href="#" onclick="changeTheme('css/dummycss.css')">orange</a></li>

@@ -1,3 +1,12 @@
+<?php
+	session_start();
+
+	if(!isset($_SESSION["userlogin"])){
+		header("Location: login.php");
+	}
+
+?>
+
 <!DOCTYPE html>
 <html>
 	<head>
@@ -21,9 +30,9 @@
 				<h3>the blog blog</h3>
 				<ul class="navheadmenus">
 					<li><a href="../index.php">home</a></li>
-					<li><a href="../pages/archive.html">archive</a></li>
-					<li><a href="../pages/about.html">about</a>
-					<li><a href="../pages/contact.html">contact</a>
+					<li><a href="../pages/archive.php">archive</a></li>
+					<li><a href="../pages/about.php">about</a>
+					<li><a href="../pages/contact.php">contact</a>
 					<li><a href="#" onclick="dropdown()">themes</a>
 						<ul id="navheadinside">
 							<li><a href="#" onclick="changeTheme('../css/dummycss.css')">orange</a></li>
@@ -46,9 +55,9 @@
 					<h3>Main pages</h3>
 						<ul>
 							<li> <a href="../index.php">Homepage</a> </li>
-							<li> <a href="../pages/archive.html">Sitemap</a> </li>
-							<li> <a href="../pages/about.html">About</a> </li>
-							<li> <a href="../pages/contact.html">Contact</a> </li>
+							<li> <a href="../pages/archive.php">Sitemap</a> </li>
+							<li> <a href="../pages/about.php">About</a> </li>
+							<li> <a href="../pages/contact.php">Contact</a> </li>
 						</ul>
 					<hr>
 					<h3>Posts</h3>
